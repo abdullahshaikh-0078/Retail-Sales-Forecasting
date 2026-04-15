@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data – keep raw & processed CSVs in repo (small dataset)
+# Uncomment lines below to exclude large data files:
+# data/raw/*.csv
+# data/processed/*.csv
+
+# Trained model file (large; add to repo OR use Git LFS)
+# models/*.pkl
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Output logs
+*.log
+
+# Secrets
+.env
+secrets.yaml
