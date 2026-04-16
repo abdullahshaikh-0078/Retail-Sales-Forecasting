@@ -93,8 +93,8 @@ We evaluated multiple approaches before choosing XGBoost + RF:
 | **LSTM / RNN** | Overkill for dataset size; requires GPU; poor interpretability; harder to explain in interviews |
 | **Prophet** | Good for single series with strong seasonality; less effective for multi-SKU tabular feature sets |
 | **Linear Regression** | Too simple; cannot capture non-linear promo × seasonality interactions |
-| **XGBoost** ✅ | Best MAPE (18.6%); handles non-linear relationships; fast; works with tabular engineered features; interpretable via SHAP |
-| **Random Forest** ✅ | Robust to noise and outliers; strong baseline; native feature importance; used as comparison |
+| **XGBoost**  | Best MAPE (18.6%); handles non-linear relationships; fast; works with tabular engineered features; interpretable via SHAP |
+| **Random Forest**  | Robust to noise and outliers; strong baseline; native feature importance; used as comparison |
 
 **Why Croston/SBA for intermittent SKUs?**
 - Standard regressors systematically over-predict on zero-heavy series
@@ -134,8 +134,6 @@ Tested on a 60-day holdout (Nov–Dec 2023) — **lower is better:**
 - Low absolute volumes (3–4 units/day) → small absolute errors appear large in % terms
 - Irregular purchase cycles (consumers buy monthly, not daily)
 - Candidate for Croston treatment in production
-
-![Model Benchmark](images/19_model_benchmark.png)
 
 ---
 
@@ -363,17 +361,11 @@ Moving Avg (7d)  7.96  11.24    26.22     NaN
 ### Executive Dashboard
 ![Dashboard](images/18_executive_dashboard.png)
 
-### Model Benchmark Comparison
-![Benchmark](images/19_model_benchmark.png)
-
 ### Actual vs Predicted
 ![Actual vs Predicted](images/12_actual_vs_predicted.png)
 
 ### Feature Importance (colour-coded by group)
 ![Feature Importance](images/11_feature_importance.png)
-
-### Error Analysis by Category
-![Error Analysis](images/20_error_analysis.png)
 
 ### Safety Stock vs Reorder Point
 ![SS vs ROP](images/14_ss_vs_rop.png)
@@ -443,12 +435,6 @@ Being honest about limitations is important for credibility:
 - 📧 abdullahmuk2025@gmail.com
 - 💼 [LinkedIn](https://www.linkedin.com/in/abdullah-shaikh007/)
 - 🐙 [GitHub](https://github.com/abdullahshaikh-0078)
-
----
-
-## 📄 License
-
-MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
